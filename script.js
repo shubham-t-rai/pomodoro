@@ -7,16 +7,15 @@ let timer = null;
 
 topHeadings.forEach((topHeading) => {
   topHeading.addEventListener("click", function (e) {
-    e.stopPropagation();``
     clearInterval(timer);
     timer = null;
 
     topHeadings.forEach((h) => h.classList.remove("default"));
-    e.target.classList.add("default");
+    e.currentTarget.classList.add("default");
 
-    if (e.target.id === "short-break") {
+    if (e.currentTarget.id === "short-break") {
       totalSeconds = 5 * 60;
-    } else if (e.target.id === "long-break") {
+    } else if (e.currentTarget.id === "long-break") {
       totalSeconds = 15 * 60;
     } else {
       totalSeconds = 25 * 60;
@@ -68,10 +67,12 @@ function resetCountdown() {
 
 botHeadings.forEach((botHeading) => {
   botHeading.addEventListener("click", function (e) {
-    e.stopPropagation();
-    if (e.target.id == "start") {
+    botHeadings.forEach((h) => h.classList.remove("default"));
+    e.currentTarget.classList.add("default");
+
+    if (e.currentTarget.id == "start") {
       startCountdown();
-    } else if (e.target.id == "pause") {
+    } else if (e.currentTarget.id == "pause") {
       pauseCountdown();
     } else {
       resetCountdown();

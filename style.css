@@ -11,7 +11,7 @@
 
 html,
 body {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   font-family: "Inter", sans-serif;
 }
@@ -30,12 +30,13 @@ main {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
-  cursor: pointer;
 }
 
 .top h4 {
   font-weight: 500;
   user-select: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .top h4:active {
@@ -54,12 +55,13 @@ main {
 .bot {
   display: flex;
   gap: 20px;
-  cursor: pointer;
 }
 
 .bot h4 {
   font-weight: 500;
   user-select: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .bot h4:active {
@@ -88,11 +90,11 @@ main .info.default {
     font-size: 0.9rem;
   }
 
-  .top, .bot {
+  .top,
+  .bot {
     gap: 15px;
   }
 }
-
 
 @media (max-width: 480px) {
   .mid h1 {
@@ -104,8 +106,8 @@ main .info.default {
     font-size: 0.8rem;
   }
 
-  .top, .bot {
+  .top,
+  .bot {
     gap: 10px;
   }
 }
-
