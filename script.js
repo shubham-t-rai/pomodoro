@@ -7,6 +7,7 @@ let timer = null;
 
 topHeadings.forEach((topHeading) => {
   topHeading.addEventListener("click", function (e) {
+    e.stopPropagation();``
     clearInterval(timer);
     timer = null;
 
@@ -67,6 +68,7 @@ function resetCountdown() {
 
 botHeadings.forEach((botHeading) => {
   botHeading.addEventListener("click", function (e) {
+    e.stopPropagation();
     if (e.target.id == "start") {
       startCountdown();
     } else if (e.target.id == "pause") {

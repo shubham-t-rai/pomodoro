@@ -26,7 +26,6 @@ main {
   justify-content: center;
 }
 
-
 .top {
   display: flex;
   gap: 20px;
@@ -74,9 +73,39 @@ main .info {
   border-radius: 30px;
 }
 
-main .info.default{
+main .info.default {
   background-color: var(--sec);
   color: var(--pri);
 }
 
+@media (max-width: 768px) {
+  .mid h1 {
+    font-size: 9rem;
+  }
+
+  main .info {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .top, .bot {
+    gap: 15px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .mid h1 {
+    font-size: 5rem;
+  }
+
+  main .info {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+  }
+
+  .top, .bot {
+    gap: 10px;
+  }
+}
 
