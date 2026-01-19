@@ -13,6 +13,8 @@ topHeadings.forEach((topHeading) => {
     topHeadings.forEach((h) => h.classList.remove("default"));
     e.currentTarget.classList.add("default");
 
+    botHeadings.forEach((h) => h.classList.remove("default"));
+
     if (e.currentTarget.id === "short-break") {
       totalSeconds = 5 * 60;
     } else if (e.currentTarget.id === "long-break") {
@@ -69,6 +71,9 @@ botHeadings.forEach((botHeading) => {
   botHeading.addEventListener("click", function (e) {
     botHeadings.forEach((h) => h.classList.remove("default"));
     e.currentTarget.classList.add("default");
+    if (e.currentTarget.id == "reset") {
+      e.currentTarget.classList.remove("default");
+    }
 
     if (e.currentTarget.id == "start") {
       startCountdown();
