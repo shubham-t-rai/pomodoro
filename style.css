@@ -8,7 +8,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  background-color:var(--pri)
+  
+}
 html,
 body {
   height: 100%;
@@ -19,7 +22,6 @@ body {
 main {
   height: 100vh;
   width: 100%;
-  background-color: var(--pri);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,6 +80,134 @@ main .info {
 main .info.default {
   background-color: var(--sec);
   color: var(--pri);
+}
+#resetAll {
+  margin-top: auto;
+  width: 100px;
+  padding: 5px 18px;
+  border-radius: 999px; /* pill shape */
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+  background: transparent;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+}
+#resetAll:hover{
+  background: #ff4d4d;
+  color: #fff;
+}
+
+
+.close {
+ 
+  padding: 10px 18px;
+  border-radius: 999px; /* pill shape */
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+  background: #8b949e;
+  color: #fff;
+}
+.close:hover{
+  background:  #7a828a;
+}
+.saveChanges {
+ 
+  padding: 10px 18px;
+  border-radius: 999px; /* pill shape */
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+.theme {
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.theme select {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  margin-top: 1vh;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 1.1rem;
+  appearance: none;
+  font-weight: 600;
+  -webkit-appearance: none;
+}
+.theme-buttons {
+  margin-top: auto;
+  display: flex;
+  gap: 14px;
+}
+.settings-container {
+  
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+ 
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 9999;
+}
+
+.settings-card {
+  width: clamp(320px, 90vw, 560px); 
+  height: clamp(420px, 90vh, 640px);
+  max-height: 90vh;
+  
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  
+  
+  display: flex; 
+  flex-direction: row;
+}
+.general {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  cursor: pointer;
+  height: 100%;
+}
+
+.general p {
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.general p:hover {
+  color: #cccccc;
+}
+
+.general p:focus {
+  border-bottom-color: #fff;
 }
 
 @media (max-width: 768px) {
